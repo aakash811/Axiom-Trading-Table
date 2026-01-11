@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "remixicon/fonts/remixicon.css";
+
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Axiom Trade exact dark theme colors */
+  --background: #0d0d0d;
+  --foreground: #e5e5e5;
+  --card: #141414;
+  --card-foreground: #e5e5e5;
+  --popover: #1a1a1a;
+  --popover-foreground: #e5e5e5;
+  --primary: #22c55e;
+  --primary-foreground: #0d0d0d;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #a3a3a3;
+  --muted: #262626;
+  --muted-foreground: #737373;
+  --accent: #1f1f1f;
+  --accent-foreground: #e5e5e5;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #262626;
+  --input: #1f1f1f;
+  --ring: #22c55e;
+  --textPrimary: #fcfcfc;
+  --textSecondary: #c8c9d1;
+  --textTertiary: #777a8c;
+  --primaryStroke: #22242d;
+  --primaryBlue: #526fff;
+  --primaryGreen: #12af80;
+  --primaryRed: #f75459;
+  --backgroundTertiary: #18181a;
+  --backgroundSecondary: #101115;
+  --backgroundPrimary: #272a31;
+  --bg-secondaryStroke: #272a31
+
+
+  /* Axiom specific colors */
+  --axiom-cyan: #06b6d4;
+  --axiom-green: #22c55e;
+  --axiom-red: #f43f5e;
+  --axiom-orange: #f97316;
+  --axiom-yellow: #eab308;
+  --axiom-pink: #ec4899;
+  --axiom-purple: #a855f7;
+  --axiom-blue: #3b82f6;
+
+  --chart-1: #22c55e;
+  --chart-2: #f43f5e;
+  --chart-3: #3b82f6;
+  --chart-4: #eab308;
+  --chart-5: #06b6d4;
+  --radius: 0.375rem;
+  --sidebar: #141414;
+  --sidebar-foreground: #e5e5e5;
+  --sidebar-primary: #22c55e;
+  --sidebar-primary-foreground: #0d0d0d;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #e5e5e5;
+  --sidebar-border: #262626;
+  --sidebar-ring: #22c55e;
+}
+
+.dark {
+  --background: #0d0d0d;
+  --foreground: #e5e5e5;
+  --card: #141414;
+  --card-foreground: #e5e5e5;
+  --popover: #1a1a1a;
+  --popover-foreground: #e5e5e5;
+  --primary: #22c55e;
+  --primary-foreground: #0d0d0d;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #a3a3a3;
+  --muted: #262626;
+  --muted-foreground: #737373;
+  --accent: #1f1f1f;
+  --accent-foreground: #e5e5e5;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #262626;
+  --input: #1f1f1f;
+  --ring: #22c55e;
+}
+
+@theme inline {
+  --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  /* Custom Axiom colors */
+  --color-axiom-cyan: var(--axiom-cyan);
+  --color-axiom-green: var(--axiom-green);
+  --color-axiom-red: var(--axiom-red);
+  --color-axiom-orange: var(--axiom-orange);
+  --color-axiom-yellow: var(--axiom-yellow);
+  --color-axiom-pink: var(--axiom-pink);
+  --color-axiom-purple: var(--axiom-purple);
+  --color-axiom-blue: var(--axiom-blue);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-textPrimary: var(--textPrimary);
+  --color-textSecondary: var(--textSecondary);
+  --color-textTertiary: var(--textTertiary);
+  --color-primaryStroke: var(--primaryStroke);
+  --color-primaryBlue: var(--primaryBlue);
+  --color-primaryGreen: var(--primaryGreen);
+  --color-primaryRed: var(--primaryRed);
+  --color-backgroundTertiary: var(--backgroundTertiary);
+  --color-backgroundSecondary: var(--backgroundSecondary);
+  --color-backgroundPrimary: var(--backgroundPrimary);
+  --color-bg-secondaryStroke: var(--bg-secondaryStroke);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar for the dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Price flash animations */
+@keyframes flash-green {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(34, 197, 94, 0.2);
+  }
+}
+
+@keyframes flash-red {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(244, 63, 94, 0.2);
+  }
+}
+
+.flash-up {
+  animation: flash-green 0.5s ease-out;
+}
+
+.flash-down {
+  animation: flash-red 0.5s ease-out;
+}
+
+/* Shimmer loading effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--muted) 25%, var(--accent) 50%, var(--muted) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Migration progress bar */
+.migration-progress {
+  background: linear-gradient(90deg, var(--axiom-cyan) 0%, var(--axiom-green) 100%);
+}
+
+/* Card hover effect */
+.token-card-hover {
+  transition: background-color 0.15s ease;
+}
+
+.token-card-hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Red border for warning tokens */
+.token-border-warning {
+  border: 1px solid var(--axiom-red);
+}
+
+/* Green border for highlighted tokens */
+.token-border-highlight {
+  border: 1px solid var(--axiom-green);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 359px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .shimmer {
+    animation: none;
+    background: var(--muted);
+  }
+}
